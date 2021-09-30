@@ -13,6 +13,7 @@ on fs
     install_keyring
 
 on post-fs
+    start health-hal-2-1
     start boot-hal-1-2
     start mtk.plpath.utils.link
 
