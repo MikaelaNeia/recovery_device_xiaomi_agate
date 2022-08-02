@@ -157,8 +157,14 @@ TW_DEFAULT_BRIGHTNESS := 1200
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_APEX := true
 TW_DEVICE_VERSION := mikaela
-TW_Y_OFFSET := 125
-TW_H_OFFSET := -116
+
+ifneq ($(OF_HIDE_NOTCH),1)
+    # Configure Status bar icons for regular TWRP builds only
+    TW_CUSTOM_CLOCK_POS := 30
+    TW_CUSTOM_CPU_POS := 605
+    TW_STATUS_ICONS_ALIGN := center
+endif
+
 TW_NO_HAPTICS := true
 TW_SCREEN_BLANK_ON_BOOT:= true
 
