@@ -118,7 +118,6 @@ BOARD_MAIN_PARTITION_LIST := odm product system system_ext vendor
 BOARD_MAIN_SIZE := 9125756928
 
 TARGET_COPY_OUT_PRODUCT := product
-TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Properties
