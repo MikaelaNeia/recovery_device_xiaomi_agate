@@ -22,14 +22,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Device specific configs
 $(call inherit-product, device/xiaomi/agate/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := agate
-PRODUCT_NAME := twrp_agate
+PRODUCT_NAME := omni_agate
 PRODUCT_BRAND := Xiaomi	
 PRODUCT_MODEL := 21081111RG
 PRODUCT_MANUFACTURER := Xiaomi 
+
+# HACK: Set vendor patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.build.security_patch=2127-12-31 \
+    ro.bootimage.build.date.utc=0
