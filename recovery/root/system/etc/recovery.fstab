@@ -5,12 +5,12 @@
 # TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
-#<src>                                           <mnt_point>           <type>   <mnt_flags and options>                                         <fs_mgr_flags>
-system                                           /system               ext4     ro                                                              wait,logical,slotselect
-system_ext                                       /system_ext           ext4     ro                                                              wait,logical,slotselect
-product                                          /product              ext4     ro                                                              wait,logical,slotselect
-vendor                                           /vendor               ext4     ro                                                              wait,logical,slotselect
-odm                                              /odm                  ext4     ro                                                              wait,logical,slotselect
+#<src>                          <mnt_point>           <type>   <mnt_flags and options>                                         <fs_mgr_flags>
+system                           /system               ext4     ro                                                              wait,logical,slotselect
+system_ext                       /system_ext           ext4     ro                                                              wait,logical,slotselect
+product                           /product              ext4     ro                                                              wait,logical,slotselect
+vendor                            /vendor               ext4     ro                                                              wait,logical,slotselect
+odm                               /odm                 ext4     ro                                                              wait,logical,slotselect
 
 # Metadata
 /dev/block/by-name/metadata                      /metadata             ext4     noatime,nosuid,nodev,discard                                    wait,check,formattable
