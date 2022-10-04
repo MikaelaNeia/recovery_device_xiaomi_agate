@@ -29,7 +29,7 @@ $(call inherit-product, device/xiaomi/agate/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := agate
-PRODUCT_NAME := omni_agate
+PRODUCT_NAME := twrp_agate
 PRODUCT_BRAND := Xiaomi	
 PRODUCT_MODEL := 21081111RG
 PRODUCT_MANUFACTURER := Xiaomi 
