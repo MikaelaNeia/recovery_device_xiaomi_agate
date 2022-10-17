@@ -33,6 +33,7 @@ AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     system \
+    lk \
     system_ext \
     product \
     vendor \
@@ -55,15 +56,21 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service \
-    android.hardware.boot@1.2-impl \
     bootctrl.mt6893.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
 
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
-    
+
+# Health Hal
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+
 # Additional target Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
