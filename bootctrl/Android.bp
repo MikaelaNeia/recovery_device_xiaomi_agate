@@ -23,6 +23,9 @@ cc_library_shared {
         "liblog",
         "libbase",
         "libcutils",
+        "android.hardware.boot@1.0",
+        "android.hardware.boot@1.1",
+        "android.hardware.boot@1.2"
     ],
     static_libs: ["libfstab"],
 }
